@@ -32,9 +32,10 @@ with open("output.csv", newline="", encoding="utf-8", errors="ignore") as f:
         print(F"処理失敗: 行目,{line_number}→{row[:50]}→{e}")
 
 # 外部ファイルへの出力
-with open("re_count.csv", "w", newline="", encoding="utf-8") as out:
+with open("503_count.csv", "w", newline="", encoding="utf-8") as out:
      writer = csv.writer(out)
      writer.writerow(["ip", "appear"])
 
      for ip, count in ip_counter.items():
+
           writer.writerow([ip, count])
